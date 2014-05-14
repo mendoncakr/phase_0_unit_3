@@ -5,7 +5,7 @@
 
 
 ## Release 0: Student Roster Schema
-![Students Schema](https://github.com/mendoncakr/phase_0_unit_3/blob/master/week_7/imgs/Students_Schema.png)
+![Students Schema](https://raw.githubusercontent.com/mendoncakr/phase_0_unit_3/master/week_7/imgs/Students_Schema.png)
 
 
 ## Release 1: One to Many Schema
