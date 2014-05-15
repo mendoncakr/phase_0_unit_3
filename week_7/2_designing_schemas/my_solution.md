@@ -16,7 +16,7 @@
 ![One To One](https://raw.githubusercontent.com/mendoncakr/phase_0_unit_3/master/week_7/imgs/OneToOne.png)
 
 ## Release 3: Many to Many Schema
-<!-- display your image inline here -->
+![Many To Many](https://raw.githubusercontent.com/mendoncakr/phase_0_unit_3/master/week_7/imgs/ManyToMany.png) 
 
 
 ## Release 4: Design your own Schema
