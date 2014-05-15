@@ -21,22 +21,22 @@
 # Your fabulous code goes here....
 
 class GroceryItem
+  attr_accessor :item_name, :quantity, :purchased
 
-    def initialize(item_name, quantity, purchased = false)
-      @item_name = item_name
-      @quantity = quantity
-      @purchased = purchased
-    end
-    attr_accessor :item_name, :quantity, :purchased
-    
+  def initialize(item_name, quantity, purchased = false)
+    @item_name = item_name
+    @quantity = quantity
+    @purchased = purchased
+  end
+
 end
 
 class GroceryList
 	attr_accessor :list
     
-    def initialize()
-      @list = []
-    end
+  def initialize()
+    @list = []
+  end
     
     def add_item(*item)
       item.each { |item| list << item }
@@ -58,7 +58,7 @@ class GroceryList
         if item.purchased
           puts "[x] " + item.item_name + ": " + item.quantity.to_s
         else
-         puts "[ ]" + item.item_name + ": " + item.quantity.to_s
+          puts "[ ]" + item.item_name + ": " + item.quantity.to_s
         end
       end
     end
@@ -71,6 +71,7 @@ end
  
 banana = GroceryItem.new("Banana", 5)
 apple = GroceryItem.new("Apple", 10)
+
 list = GroceryList.new()
 list.add_item(banana, apple)
 list.view_list
