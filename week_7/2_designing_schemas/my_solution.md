@@ -33,3 +33,4 @@ e.g. If a chef created 3 dishes, then there would be 3 records for that chef in 
 ## Release 5: Reflection
 
 It was and still is a little hard to wrap my head around schema relationships. Although, I found it much easier to understand when I used things that I could relate to. i.e. food
+I also discovered a little something about myself during this challenge. It's been a hectic week between traveling back to LA, quitting my job, and work itself, and I was a little stressed/panicky about time. I found that being mindful of the situation and trying to relax, made learning a lot more approachable.
