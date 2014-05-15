@@ -9,12 +9,11 @@
 
 
 ## Release 1: One to Many Schema
-<!-- display your image inline here -->
+![One To Many](https://raw.githubusercontent.com/mendoncakr/phase_0_unit_3/master/week_7/imgs/OneToMany.png)
 
 
 ## Release 2: One to One Schema
-<!-- display your image inline here -->
-
+![One To One](https://raw.githubusercontent.com/mendoncakr/phase_0_unit_3/master/week_7/imgs/OneToOne.png)
 
 ## Release 3: Many to Many Schema
 <!-- display your image inline here -->
