@@ -1,7 +1,24 @@
 # U3.W7: Modeling a Real-World Database (SOLO CHALLENGE)
 
 ## Release 0: Users Fields
-<!-- Identify the fields Twitter collects data for -->
+Twitter collects data for:
+ - search queries
+ - my tweets
+ - who I'm following
+ - my followers
+ - my lists
+ - notifications 
+ - basic account information 
+ 	- (about me description, location, interests) 
+ - profile settings 
+ 	- (e-mail, username, timezone, security, mobile, design, etc)
+ - profile customization 
+ 	- (backgrounds, profile pictures, widgets)
+ - trends
+ - who i should follow
+ - direct messages
+
+
 
 ## Release 1: Tweet Fields
 <!-- Identify the fields Twitter uses to represent/display a tweet. What are you required or allowed to enter? -->
