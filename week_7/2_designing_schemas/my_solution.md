@@ -21,8 +21,15 @@
 
 ## Release 4: Design your own Schema
 Description of what you're modeling: 
+My one to one relationship belows links a restaraunt and it's instagram account. We all know that food tastes better on instagram so why wouldn't a restaraunt link it??
+![My One To One](https://raw.githubusercontent.com/mendoncakr/phase_0_unit_3/master/week_7/imgs/MyOneToOne.png)
 
-<!-- display your one-to-one image inline here -->
-<!-- display your many-to-many image inline here -->
+
+My many to many relationship schema belows shows relates chefs and their dishes made. We know that chefs can created many dishes and also that dishes can be created by many chefs. The join and/or intermediate table will record all combinations that exist between chefs and their dishes.
+
+e.g. If a chef created 3 dishes, then there would be 3 records for that chef in the join table. Additionally, if that chef was working collaboratively with another chef on a particular dish, it would also show up in the join table.
+![My Many To Many](https://raw.githubusercontent.com/mendoncakr/phase_0_unit_3/master/week_7/imgs/MyManyToMany.png)
 
 ## Release 5: Reflection
+
+It was and still is a little hard to wrap my head around schema relationships. Although, I found it much easier to understand when I used things that I could relate to. i.e. food
