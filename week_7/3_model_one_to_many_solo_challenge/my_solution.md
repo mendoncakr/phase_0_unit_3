@@ -26,13 +26,15 @@ The fields Twitter uses to display a tweet include location, a photo, and a char
 
 ## Release 2: Explain the relationship
 The relationship between `users` and `tweets` is: 
-<!-- because... -->
+because the tweets are linked to the user. They are connected by a user id.
 
 ## Release 3: Schema Design
-<!-- Include your image (inline) of your schema -->
+![Schema Design](https://raw.githubusercontent.com/mendoncakr/phase_0_unit_3/master/week_7/imgs/TwitterScreen.png)
 
 ## Release 4: SQL Statements
-<!-- Include your SQL Statements. How can you make markdown files show blocks of code? -->
-
+```
+SELECT tweets FROM users
+WHERE userid = '<user_id_here>'
+```
 ## Release 5: Reflection
 <!-- Be sure to add your reflection here!!! -->
