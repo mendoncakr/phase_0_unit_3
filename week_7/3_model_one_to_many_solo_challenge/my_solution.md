@@ -21,7 +21,8 @@ Twitter collects data for:
 
 
 ## Release 1: Tweet Fields
-<!-- Identify the fields Twitter uses to represent/display a tweet. What are you required or allowed to enter? -->
+The fields Twitter uses to display a tweet include location, a photo, and a character limit. You are also allowed to enter a tweet at somebody using the @ symbol.
+
 
 ## Release 2: Explain the relationship
 The relationship between `users` and `tweets` is: 
