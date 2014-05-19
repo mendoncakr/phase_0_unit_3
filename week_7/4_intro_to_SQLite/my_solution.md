@@ -84,4 +84,4 @@ id          first_name  last_name   email                  created_at           
 ```
 
 ## Release 5: Reflect
-<!-- Add your reflection here -->
+I felt like I learned a lot from this exercise. It was definitely nice to be able to test things out in sqlite 3 and see right away if I managed to get ther right answers by simply querying the table. I also felt quite lazy having to redo the table multiple times, adding users, updating nicknames, but it definitely help me undestand the material a lot better.
