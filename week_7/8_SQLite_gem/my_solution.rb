@@ -1,6 +1,6 @@
 # U3.W7: BONUS Using the SQLite Gem
 
-# I worked on this challenge [by myself, with:]
+# I worked on this challenge myself.
 
 require 'sqlite3'
 
@@ -16,11 +16,14 @@ end
 
 def print_longest_serving_reps(minimum_years)  #sorry guys, oracle needs me, i didn't finish this!
   puts "LONGEST SERVING REPRESENTATIVES"
-  puts $db.execute("SELECT name FROM congress_members WHERE years_in_congress > #{minimum_years}")
+  longest_serve_time = $db.execute("SELECT name, years_in_congress FROM congress_members WHERE years_in_congress > #{minimum_years}")
+  longest_serve_time.each {|rep, time| puts rep.to_s + " - " + time.to_s + " years"}
 end
 
-def print_lowest_grade_level_speakers
+def print_lowest_grade_level_speakers(grade_level)
   puts "LOWEST GRADE LEVEL SPEAKERS (less than < 8th grade)"
+  lowest_level_speakers = $db.execute ("SELECT name FROM congress_members WHERE grade_current <= #{grade_level}")
+  lowest_level_speakers.each {|speaker| puts speaker}
 end
 
 def print_separator
@@ -29,19 +32,30 @@ def print_separator
   puts 
 end
 
+def print_state_reps
+	puts "State representatives from New York, New Jersey, Maine, Florida, and Alaska are:"
+	state_reps = $db.execute("SELECT name, location 
+		FROM congress_members 
+		WHERE location = 'NY' OR location = 'NJ' OR location = 'ME' OR location = 'FL' OR location = 'AK'
+		ORDER BY location;
+		")
+	state_reps.each {|rep, state| puts rep.to_s + " - " + state.to_s}
+end
 
-print_arizona_reps
 
-print_separator
+# print_arizona_reps
 
-print_longest_serving_reps(35)
+# print_separator
+
+# print_longest_serving_reps(35)
 # TODO - Print out the number of years served as well as the name of the longest running reps
 # output should look like:  Rep. C. W. Bill Young - 41 years
 
-print_separator
-print_lowest_grade_level_speakers 
+# print_separator
+# print_lowest_grade_level_speakers(8)
 # TODO - Need to be able to pass the grade level as an argument, look in schema for "grade_current" column
 
+# print_state_reps
 # TODO - Make a method to print the following states representatives as well:
 # (New Jersey, New York, Maine, Florida, and Alaska)
 
@@ -61,9 +75,17 @@ print_lowest_grade_level_speakers
 
 # REFLECTION- Include your reflection as a comment below.
 # How does the sqlite3 gem work?  What is the variable `$db` holding?  
+# The $db variable is holding the physical congress poll results database. It includes 3 tables: congress_members, votes, and voters.
+
 # Try to use your knowledge of ruby and OO to decipher this as well as h
 # ow the `#execute` method works.  Take a stab at explaining the line 
 # `$db.execute("SELECT name FROM congress_members WHERE years_in_congress 
 #   > #{minimum_years}")`.  Try to explain this as clearly as possible for 
 # your fellow students.  
+
+# From my undestanding the #execute method runs the query via the sqlite3 gem. 
+# By holding the  congress poll results database in a ruby object we can access it through the sqlite3 gem and query it
+# as we normally would in the terminal. i.e. (SELECT what_we_want FROM table WHERE query_conditions_here) The gem gives us the same functionality
+# in ruby code as we would have via terminal.
+
 # If you're having trouble, find someone to pair on this explanation with you.
