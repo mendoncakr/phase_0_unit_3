@@ -2,7 +2,21 @@
 
 ## Release 0: Create a dummy database
 
-<!-- paste your terminal output here -->
+Last login: Mon May 19 10:45:26 on ttys000
+Kenneths-MacBook-Pro:~ KennethRyan$ sqlite3 dummy.db
+-- Loading resources from /Users/KennethRyan/.sqliterc
+
+SQLite version 3.7.13 2012-07-17 17:46:21
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> CREATE TABLE users (
+   ...>   id INTEGER PRIMARY KEY AUTOINCREMENT,
+   ...>   first_name VARCHAR(64) NOT NULL,
+   ...>   last_name  VARCHAR(64) NOT NULL,
+   ...>   email VARCHAR(128) UNIQUE NOT NULL,
+   ...>   created_at DATETIME NOT NULL,
+   ...>   updated_at DATETIME NOT NULL
+   ...> );
 
 ## Release 1: Insert Data 
 <!-- paste your terminal output here -->
