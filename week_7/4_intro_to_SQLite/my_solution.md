@@ -60,7 +60,28 @@ id          first_name  last_name   email                  created_at           
 ```
 
 ## Release 4: Change a value
-
+```
+sqlite> UPDATE users SET first_name='Kimmy' WHERE id = 1;
+sqlite> SELECT * FROM users
+   ...> ;
+id          first_name  last_name   email                  created_at           updated_at           nickname  
+----------  ----------  ----------  ---------------------  -------------------  -------------------  ----------
+1           Kimmy       Lin         kimmy@devbootcamp.com  2014-05-19 18:46:00  2014-05-19 18:46:00  Kimchee   
+2           Kenneth     Mendonca    mendonca.kr@gmail.com  2014-05-19 18:46:29  2014-05-19 18:46:29  Ken       
+sqlite> UPDATE users SET nickname = 'Ninja Coder' WHERE nickname = "Kimchee"
+   ...> ;
+sqlite> SELECT * FROM users;
+id          first_name  last_name   email                  created_at           updated_at           nickname   
+----------  ----------  ----------  ---------------------  -------------------  -------------------  -----------
+1           Kimmy       Lin         kimmy@devbootcamp.com  2014-05-19 18:46:00  2014-05-19 18:46:00  Ninja Coder
+2           Kenneth     Mendonca    mendonca.kr@gmail.com  2014-05-19 18:46:29  2014-05-19 18:46:29  Ken        
+sqlite> UPDATE users set updated_at = DATETIME('now') WHERE id = 1;
+sqlite> SELECT * FROM users;
+id          first_name  last_name   email                  created_at           updated_at           nickname   
+----------  ----------  ----------  ---------------------  -------------------  -------------------  -----------
+1           Kimmy       Lin         kimmy@devbootcamp.com  2014-05-19 18:46:00  2014-05-19 18:57:06  Ninja Coder
+2           Kenneth     Mendonca    mendonca.kr@gmail.com  2014-05-19 18:46:29  2014-05-19 18:46:29  Ken     
+```
 
 ## Release 5: Reflect
 <!-- Add your reflection here -->
