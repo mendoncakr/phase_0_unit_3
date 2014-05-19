@@ -57,10 +57,10 @@ id          first_name  last_name   email                  created_at           
 ----------  ----------  ----------  ---------------------  -------------------  -------------------  ----------
 1           Kimmey      Lin         kimmy@devbootcamp.com  2014-05-19 18:46:00  2014-05-19 18:46:00  Kimchee   
 2           Kenneth     Mendonca    mendonca.kr@gmail.com  2014-05-19 18:46:29  2014-05-19 18:46:29  Ken  
-
+```
 
 ## Release 4: Change a value
 
-```
+
 ## Release 5: Reflect
 <!-- Add your reflection here -->
