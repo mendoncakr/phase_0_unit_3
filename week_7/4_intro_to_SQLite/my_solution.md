@@ -35,10 +35,38 @@ id          first_name  last_name   email                  created_at           
 1           Kimmey      Lin         kimmy@devbootcamp.com  2014-05-19 17:51:08  2014-05-19 17:51:08
 ```
 ## Release 3: Add a column
-<!-- paste your terminal output here -->
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  first_name VARCHAR(64) NOT NULL,
+  last_name  VARCHAR(64) NOT NULL,
+  email VARCHAR(128) UNIQUE NOT NULL,
+  created_at DATETIME NOT NULL,
+  updated_at DATETIME NOT NULL
+);
 
 ## Release 4: Change a value
-<!-- paste your terminal output here -->
+```
+sqlite> ALTER TABLE users
+   ...> ADD COLUMN nickname VARCHAR(64);
+sqlite> SELECT * FROM users;
+id          first_name  last_name   email                  created_at           updated_at           nickname  
+----------  ----------  ----------  ---------------------  -------------------  -------------------  ----------
+1           Kimmey      Lin         kimmy@devbootcamp.com  2014-05-19 18:46:00  2014-05-19 18:46:00            
+2           Kenneth     Mendonca    mendonca.kr@gmail.com  2014-05-19 18:46:29  2014-05-19 18:46:29     
 
+sqlite> UPDATE users
+   ...> SET nickname = 'Kimchee'
+   ...> WHERE first_name = 'Kimmey';
+sqlite> UPDATE users
+   ...> SET nickname = 'Ken'
+   ...> WHERE first_name = 'Kenneth';
+sqlite> SELECT * FROM users
+   ...> ;
+id          first_name  last_name   email                  created_at           updated_at           nickname  
+----------  ----------  ----------  ---------------------  -------------------  -------------------  ----------
+1           Kimmey      Lin         kimmy@devbootcamp.com  2014-05-19 18:46:00  2014-05-19 18:46:00  Kimchee   
+2           Kenneth     Mendonca    mendonca.kr@gmail.com  2014-05-19 18:46:29  2014-05-19 18:46:29  Ken  
+
+```
 ## Release 5: Reflect
 <!-- Add your reflection here -->
