@@ -19,11 +19,11 @@ sqlite> CREATE TABLE users (
    ...> );
 
 ## Release 1: Insert Data 
+
 id          first_name  last_name   email                  created_at           updated_at         
 ----------  ----------  ----------  ---------------------  -------------------  -------------------
 1           Kimmey      Lin         kimmy@devbootcamp.com  2014-05-19 17:51:08  2014-05-19 17:51:08
-
-
+2           Kenneth     Mendonca    mendonca.kr@gmail.com  2014-05-19 17:57:05  2014-05-19 17:57:05
 
 ## Release 2: Multi-line commands
 <!-- paste your terminal output here -->
