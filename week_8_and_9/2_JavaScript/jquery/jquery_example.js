@@ -19,8 +19,7 @@ mascotImage = $('.mascot img')
  	'text-align':'center',
  	'color': 'blue', 
  	'border': '10px solid black', 
- 	'visibility':''
- })
+ 	'visibility':''})
  mascot.css({'text-align' : 'center'})
  mascotImage.css({'width':'50%'})
 
@@ -37,21 +36,18 @@ mascotImage = $('.mascot img')
      e.preventDefault()
     $(this).attr('src', 'http://scm-l3.technorati.com/12/12/13/73853/devbootcamp.png?t=201212131312312')
   })
-
-
-
    
 // I don't understand what the function (e) is doing.
-// how would I change the properties of the images? i.e. width height  
-
-
 
   	
 //RELEASE 4 : Experiment on your own
- 
- 
- 
- 
+ $("img").click(function(){
+  mascotImage.animate({height:'500px',opacity:'0.4'},"slow");
+  mascotImage.css({border: '2px solid yellow'}).animate({borderWidth: '10px'})
+  mascotImage.animate({width:'500px',opacity:'0.8'},"slow");
+  mascotImage.animate({height:'300px',opacity:'0.4'},"fast");
+  mascotImage.animate({width:'300px',opacity:'0.8'},"slow");
+}); 
  
  
 })  // end of the document.ready function: do not remove or write DOM manipulation below this
