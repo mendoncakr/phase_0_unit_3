@@ -15,22 +15,36 @@
 
 # 3. Initial Solution
 
+# def super_fizzbuzz(array)
+# 	array.map! {|number| 
+# 		if  number % 15 == 0
+# 			array[array.rindex(number)] = 'FizzBuzz'
+# 		elsif number % 5 == 0
+# 			array[array.rindex(number)] = 'Buzz'
+# 		elsif number % 3 == 0
+# 			array[array.rindex(number)] = 'Fizz'
+# 		else 
+# 			array[array.rindex(number)] = number 
+# 		end			
+# 	}
+# 	return array
+# end
+
+# 4. Refactored Solution
 def super_fizzbuzz(array)
 	array.map! {|number| 
 		if  number % 15 == 0
-			array[array.rindex(number)] = 'FizzBuzz'
+			number = 'FizzBuzz'
 		elsif number % 5 == 0
-			array[array.rindex(number)] = 'Buzz'
+			number = 'Buzz'
 		elsif number % 3 == 0
-			array[array.rindex(number)] = 'Fizz'
+			number = 'Fizz'
 		else 
-			array[array.rindex(number)] = number 
+			number
 		end			
 	}
 	return array
 end
-
-# 4. Refactored Solution
 
 # 1. DRIVER TESTS/ASSERT STATEMENTS GO BELOW THIS LINE
 p super_fizzbuzz((1..100).map {|i| 3**(1+rand(15))}) == ["Fizz"]*100
