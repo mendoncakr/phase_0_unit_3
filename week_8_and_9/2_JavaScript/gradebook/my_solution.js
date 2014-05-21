@@ -26,6 +26,7 @@ var scores = [ [80, 70, 70, 100],
 // __________________________________________
 // Write your code below.
 
+var average = function()
 
 
 
