@@ -1,11 +1,13 @@
 # U3.W8-9: 
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge by myself.
 
 # 2. Pseudocode
-
-
+# define fibonacci sequence method
+# determine fibonacci equation
+# insert base case
+# 
 
 # 3. Initial Solution
 
