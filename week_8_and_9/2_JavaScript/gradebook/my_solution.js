@@ -35,7 +35,12 @@ var average = function (numList) {
 }
 
 
-var gradebook = {}
+var gradebook = {
+	Joseph: {},
+	Susan: {},
+	William: {},
+	Elizabeth: {}
+}
 
 
 // __________________________________________
