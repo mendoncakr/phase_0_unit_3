@@ -7,7 +7,7 @@ variables match (i.e., 'Joseph' is the first element in students; his scores are
 
 Do not alter the students and scores code.
 
-I worked on this challenge Kenneth Mendonca and Stella Kim
+I worked on this challenge initially by myself and then paired with Stella Kim
 
 */
 
@@ -17,9 +17,6 @@ var scores = [ [80, 70, 70, 100],
                [85, 80, 90, 90],
                [75, 70, 80, 75],
                [100, 90, 95, 85] ]
-
-
-
 
 
 
@@ -74,9 +71,10 @@ gradebook.getAverage("Joseph")
 
 // __________________________________________
 // Reflect
-
-
-
+// It was a little daunting at first to tackle JS because I couldn't remember any of the syntax. Diving into a for loop,
+// was actualyl kinda hard, but having a pair really helped. There were times when we weren't sure 
+// how to approach the problem and i found that trying all the possible ways, as tedious as it was, in the console
+// to be really helpful.
 
 
 
