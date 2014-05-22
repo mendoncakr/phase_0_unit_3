@@ -35,6 +35,9 @@ var average = function (numList) {
 }
 
 
+var gradebook = {}
+
+
 // __________________________________________
 // Refactored Solution
 
