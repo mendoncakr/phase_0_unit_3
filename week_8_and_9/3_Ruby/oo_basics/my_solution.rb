@@ -27,14 +27,20 @@ class Student
   end
 
   def letter_grade
-  	
-  end
-
-
+  	case @average
+  		when 0...60
+  			'F'
+	  	when 60...70
+	    	'D'
+	  	when 70...80
+	    	'C'
+	  	when 80...90
+	    	'B'
+	  	when 90..100
+	    	'A'
+		end
+	end
 end
-
-
-
 Alex = Student.new("Alex", [100,100,100,0,100])
 Ken = Student.new("Ken", [100,100,100,95,110])
 Naomi = Student.new("Naomi", [100, 55, 75, 100, 95])
