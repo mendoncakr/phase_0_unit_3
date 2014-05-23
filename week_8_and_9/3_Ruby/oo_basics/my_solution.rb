@@ -18,7 +18,18 @@ class Student
   end
 
   def average
+  	totalSum = 0
+  	@scores.each do |score|
+  		totalSum += score
+  	end
+  	@average = totalSum / @scores.length
+  	return @average
   end
+
+  def letter_grade
+  	
+  end
+
 
 end
 
