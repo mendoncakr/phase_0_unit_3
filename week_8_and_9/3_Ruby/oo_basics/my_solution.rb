@@ -95,4 +95,5 @@ p linear_search(students, "NOT A STUDENT") == -1 #=> [#<Student:0x007f9333889ac8
 
 # 5. Reflection 
 #  I actually really enjoyed this challenge as it gave me more practice with OOP. It helped me learn about instance variables and instance ethods.
-# When where and why to use them.
+# When where and why to use them. I had trouble with the linear statement because it would pass the tests, but not When
+# I changed the arguments. I am still unsure why the -1 has to be outside the loop. (line 61)
