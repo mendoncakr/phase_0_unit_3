@@ -100,6 +100,10 @@ def print_reps_and_their_voters
     congressman_and_voters[congressman] = []  
   end
 
+  # For the above code, I managed to create a hash with the key being the congressman and the value to be an empty array that would
+  # hold the names of all voters who voted for said congressman. Although, I couldn't quite figure out the best way to
+  # add the names of the voters individually and also print them. Due to time contraints, I left it as is.
+
 
 
 
