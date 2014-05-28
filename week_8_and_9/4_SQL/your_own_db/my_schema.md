@@ -1,0 +1,1 @@
+![MySchema](https://raw.githubusercontent.com/mendoncakr/phase_0_unit_3/master/week_8_and_9/4_SQL/your_own_db/Screenshot.png)
