@@ -15,16 +15,21 @@ website_id INTEGER PRIMARY KEY AUTOINCREMENT, name_of_site);
 sqlite> 
 ```
 
-Show orders from Kenneth aka customer_id = 0:
+Show orders from Kenneth:
 
 ```
-sqlite> SELECT * FROM orders WHERE customer_id=0;
-order_id    item                        website_id  restaurant_id  customer_id
-----------  --------------------------  ----------  -------------  -----------
-2           BBQ Ribs with French Fries  0           3              0          
-3           Cheeseburger                                           0          
-4           Everything Bagel with vegg                             0          
-5           Tuna Salad Sandwiche                                   0          
+sqlite> SELECT first_name, last_name, item
+   ...> FROM ;
+Error: near ";": syntax error
+sqlite> SELECT * 
+   ...> FROM orders JOIN customers ON (customer_id=id)
+   ...> WHERE first_name='Kenneth';
+order_id    item                        website_id  restaurant_id  customer_id  id          first_name  last_name   address            city        telephone_number  email                  total_number_of_orders  age         instagram_id
+----------  --------------------------  ----------  -------------  -----------  ----------  ----------  ----------  -----------------  ----------  ----------------  ---------------------  ----------------------  ----------  ------------
+2           BBQ Ribs with French Fries  0           3              0            0           Kenneth     Mendonca    778 Lincoln Place  Brooklyn    9099640670        mendonca.kr@gmail.com  0                       24                      
+3           Cheeseburger                                           0            0           Kenneth     Mendonca    778 Lincoln Place  Brooklyn    9099640670        mendonca.kr@gmail.com  0                       24                      
+4           Everything Bagel with vegg                             0            0           Kenneth     Mendonca    778 Lincoln Place  Brooklyn    9099640670        mendonca.kr@gmail.com  0                       24                      
+5           Tuna Salad Sandwiche                                   0            0           Kenneth     Mendonca    778 Lincoln Place  Brooklyn    9099640670        mendonca.kr@gmail.com  0                       24                      
 sqlite> 
 
 ```
