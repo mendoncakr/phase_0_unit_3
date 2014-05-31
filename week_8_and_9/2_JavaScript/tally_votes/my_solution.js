@@ -1,6 +1,6 @@
-// U3.W8-9: Gradebook from Names and Scores
+;// U3.W8-9: Gradebook from Names and Scores
 
-// I worked on this challenge [by myself, with:]
+// I worked on this challenge Sid Patel.
 
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
@@ -32,6 +32,8 @@ var votes = {
   "Zane": { president: "Louise", vicePresident: "Hermann", secretary: "Fred", treasurer: "Mary" }
 }
 
+
+
 // Tally the votes in voteCount.
 var voteCount = {
   president: {},
@@ -45,7 +47,7 @@ of the respective office in voteCount.  After Alex's votes have been tallied,
 voteCount would be ...
 
   var voteCount = {
-    president: { Bob: 1 },
+    president: { Bob:  1 },
     vicePresident: { Devin: 1 },
     secretary: { Gail: 1 },
     treasurer: { Kerry: 1 }
@@ -65,12 +67,33 @@ var officers = {
 
 // Pseudocode
 
+// Iterate through voter list
+// iterate through voters' selections
+// add the voters selections for each ofice to voteCount
+  // if the name is not present in votecount +
+    // set to 0 and 
+    // else add 1
+
+
 
 // __________________________________________
 // Initial Solution
 
+for (var voter in votes) {
+  var voter_names = votes[voter];
+  for (var office in voter_names) {
+    if (voteCount[office][voter_names[office]] == undefined) {
+      voteCount[office][voter_names[office]] = 1;
+    }
+    else {
+      voteCount[office][voter_names[office]] += 1;
+    }
+    
+  }
+}
 
-
+for (var office in voteCount) {
+}
 
 
 
