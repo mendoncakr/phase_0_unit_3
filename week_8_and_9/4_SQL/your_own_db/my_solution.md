@@ -34,6 +34,36 @@ sqlite>
 
 ```
 
+Show customers from Brooklyn, NY:
+```
+sqlite> SELECT first_name, last_name, age FROM customers WHERE city = 'Brooklyn';
+first_name  last_name   age       
+----------  ----------  ----------
+Kenneth     Mendonca    24        
+Noni        Susan       24        
+Sammy       Waow        19  
+```
+
+Show customers who are above the age of 20:
+
+```
+sqlite> SELECT first_name, last_name, age FROM customers WHERE age > 20;
+first_name  last_name   age       
+----------  ----------  ----------
+Kenneth     Mendonca    24        
+Noni        Susan       24 
+```
+
+Show customers who purchased 'Pork Sliders':
+```
+sqlite> SELECT first_name, last_name, age, email
+   ...> FROM customers
+   ...> JOIN orders ON id=customer_id
+   ...> WHERE item='Pork Sliders';
+first_name  last_name   age         email         
+----------  ----------  ----------  --------------
+Noni        Susan       24          noni@gmail.com
+```
 
 
 
