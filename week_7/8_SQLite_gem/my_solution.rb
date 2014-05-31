@@ -1,6 +1,6 @@
 # U3.W7: BONUS Using the SQLite Gem
 
-# I worked on this challenge myself.
+# I worked on this challenge myself and with a friend of mine who is NOT in DBC.
 
 require 'sqlite3'
 
@@ -44,7 +44,6 @@ end
 
 
 # print_arizona_reps
-
 # print_separator
 
 # print_longest_serving_reps(35)
@@ -53,20 +52,75 @@ end
 
 # print_separator
 # print_lowest_grade_level_speakers(8)
-# TODO - Need to be able to pass the grade level as an argument, look in schema for "grade_current" column
 
 # print_state_reps
 # TODO - Make a method to print the following states representatives as well:
 # (New Jersey, New York, Maine, Florida, and Alaska)
-
+# TODO - Need to be able to pass the grade level as an argument, look in schema for "grade_current" column
+# print print_separator
 
 ##### BONUS #######
 # TODO (bonus) - Stop SQL injection attacks!  Statmaster learned that interpolation of variables in SQL statements leaves some security vulnerabilities.  Use the google to figure out how to protect from this type of attack.
+
+
+
+
 
 # TODO (bonus)
 # Create a listing of all of the Politicians and the number of votes they recieved
 # output should look like:  Sen. John McCain - 7,323 votes (This is an example, yours will not return this value, it should just 
 #    have a similar format)
+
+def print_rep_and_vote_number
+  reps_and_vote_count = $db.execute("
+    SELECT name, COUNT(politician_id) 
+    FROM votes JOIN congress_members ON votes.politician_id = congress_members.id
+    GROUP BY name
+    ")
+  reps_and_vote_count.each{ |rep, votes | puts rep + " -- "+ votes.to_s + " votes" }
+end
+# Note sure if the above is the correct query for determing the number of votes per politician.
+# print_rep_and_vote_number
+
+
+
+def print_reps_and_their_voters
+  rep_and_voters = $db.execute("
+    SELECT congress_members.name, voters.first_name, voters.last_name
+    FROM congress_members
+      JOIN votes
+          ON votes.politician_id = congress_members.id
+      JOIN voters
+          ON votes.voter_id = voters.id")
+  
+   congressman_and_voters = Hash.new
+
+   rep_and_voters.each do |rep|
+    congressman = rep[0]
+    congressman_and_voters[congressman] = []  
+  end
+
+
+
+
+  print congressman_and_voters
+
+
+
+
+
+
+
+
+    # if congressman_and_voters[congressman] 
+    #   congressman_and_voters[congressman] += array[1] + ' ' + array[2] + ', ' #adding a long string, i want to add individual string names.
+    # else
+    #   congressman_and_voters[congressman] = array[1] + ' ' + array[2]+ ', '
+end
+#still need to find a way to print out ALL values of each key in a string.
+
+print_reps_and_their_voters
+
 # Create a listing of each Politician and the voter that voted for them
 # output should include the senators name, then a long list of voters separated by a comma
 #
@@ -88,4 +142,8 @@ end
 # as we normally would in the terminal. i.e. (SELECT what_we_want FROM table WHERE query_conditions_here) The gem gives us the same functionality
 # in ruby code as we would have via terminal.
 
-# If you're having trouble, find someone to pair on this explanation with you.
+# I found the bonus to be quite challenging, especially the last one. I wasn't sure if my query for congresman and their voters
+# was correct or not. However, I did get a working answer, so I used a hash to hold the voters as the values of the key (congressman) and
+# want to flatten out the 
+
+

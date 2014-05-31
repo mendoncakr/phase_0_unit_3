@@ -21,7 +21,7 @@ class Student
 
   def initialize(first_name, scores)   #Use named arguments! 
     @scores = scores #Why is this line necessary for me to print out @scores when calling average if attr_accessor is already there?
-    @first_name =first_name
+    @first_name = first_name
   end
 
   def average
