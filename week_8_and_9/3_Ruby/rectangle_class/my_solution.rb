@@ -33,14 +33,13 @@ class Rectangle
   	Math.sqrt((width**2) + (height**2))
   end
 
-  def square?
-  	if width == height
-  		return true
-  	else
-  		false
-  	end
-  end
-end
+  # def square?
+  # 	if width == height
+  # 		return true
+  # 	else
+  # 		false
+  # 	end
+  # end
 
 
 
@@ -48,7 +47,11 @@ end
 
 
 # 4. Refactored Solution
+	def square?
+		width == height ? true : false
+	end
 
+end
 
 
 
